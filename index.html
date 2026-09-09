@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>EstateFinder | Task 17</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <a class="logo" href="index.html">Estate<span>Finder</span></a>
+        <nav>
+          <a href="#listings">Listings</a><a href="#map-section">Map</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <p>FIND YOUR NEXT HOME</p>
+        <h1>Properties that fit your lifestyle.</h1>
+        <span
+          >Search, filter and explore properties on an interactive map.</span
+        >
+      </section>
+      <section class="filters">
+        <form id="filterForm">
+          <label
+            >Location / keyword<input
+              id="search"
+              type="search"
+              placeholder="Bengaluru, villa..."
+          /></label>
+          <label
+            >Min price<input
+              id="minPrice"
+              type="number"
+              min="0"
+              placeholder="₹"
+          /></label>
+          <label
+            >Max price<input
+              id="maxPrice"
+              type="number"
+              min="0"
+              placeholder="₹"
+          /></label>
+          <label
+            >Bedrooms<select id="bedrooms">
+              <option value="">Any</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select></label
+          >
+          <label
+            >Type<select id="type">
+              <option value="">Any</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>House</option>
+              <option>Studio</option>
+            </select></label
+          >
+          <button class="btn primary">Apply Filters</button
+          ><button id="clearBtn" class="btn secondary" type="button">
+            Clear
+          </button>
+        </form>
+      </section>
+      <section class="layout">
+        <div id="listings" class="panel">
+          <div class="heading">
+            <div>
+              <small>AVAILABLE HOMES</small>
+              <h2>Property Listings</h2>
+            </div>
+            <span id="resultCount"></span>
+          </div>
+          <div id="propertyGrid" class="grid"></div>
+          <p id="emptyState" class="empty hidden">
+            No properties match your filters.
+          </p>
+        </div>
+        <div id="map-section" class="panel">
+          <div class="heading">
+            <div>
+              <small>EXPLORE BY LOCATION</small>
+              <h2>Map View</h2>
+            </div>
+          </div>
+          <div id="map"></div>
+        </div>
+      </section>
+    </main>
+    <footer>EstateFinder · Task 17 Real Estate Listing Platform</footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
